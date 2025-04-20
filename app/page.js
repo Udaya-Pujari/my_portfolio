@@ -8,17 +8,10 @@ import Work from "../components/Work";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import { useEffect, useState } from "react";
-// import AnimatedCursor from "react-animated-cursor"
-import dynamic from "next/dynamic";
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [mounted, setMounted] = useState(false); // 🔥 New state to avoid hydration error
-
-  const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
-    ssr: false,
-  });
-
   useEffect(() => {
     // Wait until component is mounted (client only)
     setMounted(true);
@@ -49,20 +42,6 @@ export default function Home() {
   return (
     <>
       <div>
-        <AnimatedCursor
-          innerSize={8}
-          outerSize={25}
-          innerScale={1}
-          outerScale={2}
-          outerAlpha={0}
-          hasBlendMode={true}
-          innerStyle={{
-            backgroundColor: "orange",
-          }}
-          outerStyle={{
-            border: "2px solid green",
-          }}
-        />
         <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
         <Header isDarkMode={isDarkMode} />
         <About isDarkMode={isDarkMode} />

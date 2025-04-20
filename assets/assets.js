@@ -181,8 +181,8 @@ export const infoList = [
   {
     icon: assets.project_icon,
     iconDark: assets.project_icon_dark,
-    title: "Project",
-    description: "Nambri Technologies: TaxXL, USA",
+    title: "Key Projects",
+    description: "Nambri Technologies: TaxXL & NuModel, USA",
   },
 ];
 

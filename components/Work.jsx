@@ -2,6 +2,7 @@ import { assets, workData } from "@/assets/assets";
 import React from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
+import CountUp from "react-countup";
 
 const Work = () => {
   return (
@@ -26,11 +27,16 @@ const Work = () => {
       >
         My Projects
       </motion.h2>
-      {/* <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
-        jgsgf sjfjsfjsgf hfjsgfjsgfs fsjfgsfgjshf jfhsfjshfs shfjshfjshfj
-        shfjshfjhsjf shfjshfjshjfs jsjsfjhfj shfjshjfh sfjshfjshf fjsfjshf
-        sfjshfjsh shfjshfjsh hsfjshjfhs
-      </p> */}
+      <motion.p
+        initial={{ y: -20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
+      >
+        Successfully contributed to{" "}
+        <strong className="text-orange-500">15+</strong> real-world projects,
+        including a major industry-grade applications.
+      </motion.p>
       <div className="grid grid-cols-auto my-10 gap-5  dark:text-black">
         {workData.map((project, index) => (
           <div
